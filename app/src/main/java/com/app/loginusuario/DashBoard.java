@@ -38,13 +38,7 @@ public class DashBoard extends AppCompatActivity {
             id = (int) savedInstanceState.getSerializable("ID");
         }
         // ---------------------CLIENTE ------------------------------------
-        Creator creator = null;
-        if(id == 1){
-            creator = new mostrarAdmin();
-        }else if(id == 2){
-            creator = new mostrarCajero();
-        }
-        creator.someOperation(DashBoard.this);
+        iniciar();
         //-----------------------------------------------------------------
         btnProductos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,5 +54,15 @@ public class DashBoard extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void iniciar() {
+        Creator creator = null;
+        if(id == 1){
+            creator = new mostrarAdmin();
+        }else if(id == 2){
+            creator = new mostrarCajero();
+        }
+        creator.someOperation(DashBoard.this);
     }
 }

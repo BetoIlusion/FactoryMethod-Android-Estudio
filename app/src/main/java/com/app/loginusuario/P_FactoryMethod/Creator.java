@@ -5,7 +5,7 @@ import com.app.loginusuario.DashBoard;
 public abstract class Creator {
     public void someOperation(DashBoard dashBoard){
         Rol rol = mostrar();
-        mostrar().showActivity(dashBoard);
+        rol.showActivity(dashBoard);
     }
     public abstract Rol mostrar();
 }
